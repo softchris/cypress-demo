@@ -1,12 +1,20 @@
-import { createYield } from "typescript"
 
 describe('testing the list', () => {
+  beforeEach(() => {
+
+  })
+
+  afterEach(() => {
+    cy.screenshot()
+  })
+
   it('should have list with length 2', () => {
     
     cy.visit('http://localhost:4200')
     cy.get(".hero-input")
       .its('length')
       .should("eq", 2);
+
   })
 
   it('should add Hulk to list', () => {
